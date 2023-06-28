@@ -49,6 +49,12 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ![](./Snip20230604_9.png)
 
 ---
+点购买金币，加多少钱
+![](./Snip20230628_1.png)
+
+
+
+---
 对于有些角色比如雅木跟希尔克找不到初始属性修改，只能尝试修改存档
 
 ![](./Snip20230605_2.png)
