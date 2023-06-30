@@ -1,20 +1,22 @@
 
 1|2|3|4
 ------------ | ------------- | ------------| ------------
-![1](./Screenshot_20230605-205615.png) | ![2](./Screenshot_20230605-205623.png) |![3](./Screenshot_20230605-205650.png) |![4](./Screenshot_20230605-205655.png)
+![1](./imgs/Screenshot_20230605-205615.png) | ![2](./imgs/Screenshot_20230605-205623.png) |![3](./imgs/Screenshot_20230605-205650.png) |![4](./imgs/Screenshot_20230605-205655.png)
  
 
-1.下载这个`jar`游戏模拟器
+1.下载`jar`游戏模拟器，安装到`安卓`手机上，
 
 https://github.com/nikita36078/J2ME-Loader
 
-安装到`安卓`手机上，
+
 
 ---
 2.找到`火焰-圣火徽章.jar`文件，用模拟器安装这个`火焰-圣火徽章.jar`就可以玩了。
 
 ---
-3.修改`火焰-圣火徽章.jar`。工具`Recaf`：https://github.com/Col-E/Recaf
+3.修改`火焰-圣火徽章.jar`。工具
+
+`Recaf`：https://github.com/Col-E/Recaf
 
 ---
 4.启动工具`Recaf`
@@ -29,37 +31,47 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 
 ---
 转职角色的初始值属性，商店道具价格
-![](./Snip20230604_5.png)
+![](./imgs/Snip20230604_5.png)
+![](./imgs/Snip20230630_3.png)
+
+
+
+
 
 ---
 角色获得的经验
-![](./Snip20230604_6.png)
+![](./imgs/Snip20230604_6.png)
 
 ---
 根据获得的经验判断角色升级
-![](./Snip20230604_7.png)
+![](./imgs/Snip20230604_7.png)
 
 
 ---
 升级后，需要增加的属性增加多少值
-![](./Snip20230604_8.png)
+![](./imgs/Snip20230604_8.png)
 
 ---
 进商店更快些
-![](./Snip20230604_9.png)
+![](./imgs/Snip20230604_9.png)
 
 ---
 点购买金币，加多少钱
-![](./Snip20230628_1.png)
+![](./imgs/Snip20230628_1.png)
+
+---
+游戏通关结束时，显示名字等级战力
+![](./imgs/Snip20230630_2.png)
+
 
 
 
 ---
 对于有些角色比如雅木跟希尔克找不到初始属性修改，只能尝试修改存档
 
-![](./Snip20230605_2.png)
+![](./imgs/Snip20230605_2.png)
 
-![](./Snip20230605_1.png)
+![](./imgs/Snip20230605_1.png)
 那么问题来了，为了验证存的是啥，就得写个打印数组的方法的代码，然后手机连上`Android Studio`,看打印结果
 
 ---
@@ -91,10 +103,10 @@ private static void a(final String s, final int n, final byte[] array) throws Ex
 
 然后再生成apk,找出dex
 
-![](./Snip20230605_3.png)
+![](./imgs/Snip20230605_3.png)
 
 再用`dex-tools-2.1`，用`./d2j-dex2jar.sh classes3.dex`命令转换化jar
-![](./Snip20230605_4.png)
+![](./imgs/Snip20230605_4.png)
 
 
 
@@ -211,12 +223,12 @@ I:
 连上`Android Studio`,看打印结果。
 操作下角色，点存储进度，就会有打印了
 
-![](./Snip20230605_6.png)
+![](./imgs/Snip20230605_6.png)
 后面就研究这个数组，就实现了修改存档了
 
 ---
 终于看懂了这啥参数调用
-![](./Snip20230604_11.png)
+![](./imgs/Snip20230604_11.png)
 
 
 
