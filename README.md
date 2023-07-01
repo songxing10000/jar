@@ -4,30 +4,36 @@
 ![1](./imgs/Screenshot_20230605-205615.png) | ![2](./imgs/Screenshot_20230605-205623.png) |![3](./imgs/Screenshot_20230605-205650.png) |![4](./imgs/Screenshot_20230605-205655.png)
  
 
-1.下载`jar`游戏模拟器，安装到`安卓`手机上，
+1.安装`jar`游戏模拟器
 
 https://github.com/nikita36078/J2ME-Loader
 
 
 
 ---
-2.找到`火焰-圣火徽章.jar`文件，用模拟器安装这个`火焰-圣火徽章.jar`就可以玩了。
+2.模拟器安装`火焰-圣火徽章.jar`就可以玩了。
 
 ---
-3.修改`火焰-圣火徽章.jar`。工具
+3.修改`火焰-圣火徽章.jar`工具
 
 `Recaf`：https://github.com/Col-E/Recaf
 
+`jclasslib`：https://github.com/ingokegel/jclasslib
+
+只查看字节码可用tools下的JD-GUI
+
+`java -jar /Users/dfpo/jar/tools/JD-GUI.app/Contents/Resources/Java/jd-gui-1.6.6-min.jar`
+
 ---
-4.启动工具`Recaf`
+4.启动工具`Recaf` 
 ```sh
 java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ```
-
 ---
 5.点菜单里的，`文件`、`加载`，选中`火焰-圣火徽章.jar`
 
 以下给出几个可修改的地方
+
 
 ---
 转职角色的初始值属性，商店道具价格
