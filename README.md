@@ -6,12 +6,14 @@
 
 1.安装`jar`游戏模拟器
 
-https://github.com/nikita36078/J2ME-Loader
+`tools`文件夹下的`J2ME_Loader-1.7.9-open-release.apk`
 
 
 
 ---
 2.模拟器安装`火焰-圣火徽章.jar`就可以玩了。
+
+`jar`文件夹下的`火焰-圣火徽章.jar`
 
 ---
 3.修改`火焰-圣火徽章.jar`工具
@@ -40,8 +42,10 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ![](./imgs/Snip20230604_5.png)
 ![](./imgs/Snip20230630_3.png)
 
+---
+敌方人物的初始值属性 
 
-
+![](./imgs/Snipaste_2023-07-10_22-49-10.png)
 
 
 ---
@@ -64,6 +68,23 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ---
 点购买金币，加多少钱
 ![](./imgs/Snip20230628_1.png)
+
+---
+武器耐久度
+
+![](./imgs/Snipaste_2023-07-10_22-14-40.png)
+
+--- 
+商店整装装备个数限制
+![](./imgs/Snipaste_2023-07-10_22-41-33.png)
+
+---
+给予或者访问房子获取物品个数限制
+![Alt text](./imgs/Snipaste_2023-07-10_15-50-36.png)
+
+---
+往往地图上加入敌军
+![Alt text](./imgs/Snipaste_2023-07-10_11-23-49.png)
 
 ---
 游戏通关结束时，显示名字等级战力
