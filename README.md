@@ -87,6 +87,9 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ![Alt text](./imgs/Snipaste_2023-07-10_11-23-49.png)
 
 ---
+![Alt text](./imgs/Snipaste_2023-07-11_16-51-54.png)
+
+---
 游戏通关结束时，显示名字等级战力
 ![](./imgs/Snip20230630_2.png)
 
