@@ -74,6 +74,14 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 
 ![](./imgs/Snipaste_2023-07-10_22-14-40.png)
 
+---
+访问房子
+系统默认的
+![](./imgs/Snipaste_2023-07-12_14-36-59.png)
+我修改后的
+![](./imgs/Snipaste_2023-07-12_16-11-55.png)
+
+
 --- 
 商店整装装备个数限制
 ![](./imgs/Snipaste_2023-07-10_22-41-33.png)
