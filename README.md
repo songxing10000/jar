@@ -20,12 +20,6 @@
 
 `Recaf`：https://github.com/Col-E/Recaf
 
-`jclasslib`：https://github.com/ingokegel/jclasslib
-
-只查看字节码可用tools下的JD-GUI
-
-`java -jar /Users/dfpo/jar/tools/JD-GUI.app/Contents/Resources/Java/jd-gui-1.6.6-min.jar`
-
 ---
 4.启动工具`Recaf` 
 ```sh
@@ -35,6 +29,19 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 5.点菜单里的，`文件`、`加载`，选中`火焰-圣火徽章.jar`
 
 以下给出几个可修改的地方
+
+---
+每关开始时，需要加载地图（如`m0`）文件，然后需要把我方敌方人物的数据(如`p0`)放到地图上去
+![Alt text](./imgs/Snipaste_2023-07-14_10-43-35.png)
+
+
+
+---
+初始人物：雅木、希尔克、鲁卡、格雷的初始值需要在P0中修改，如下，修改了人物的初始血
+
+![Alt text](./imgs/Snipaste_2023-07-15_11-01-56.png)
+十六进制的`29`就是十进制的`41`，所以鲁卡的血为`41`如下图
+![Alt text](./imgs/Snipaste_2023-07-14_22-18-06.png)
 
 
 ---
@@ -81,6 +88,7 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 我修改后的
 ![](./imgs/Snipaste_2023-07-12_16-11-55.png)
 
+也可以根据需要修改，如放置两个`地震`，两个`星之珠`(武器耐久度不减)，直接双`地震`秒杀通关
 
 --- 
 商店整装装备个数限制
@@ -103,9 +111,15 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 
 
 
+---
+读取`p0`文件
+![](./imgs/Snipaste_2023-07-14_15-11-52.png)
+![](./imgs/Snipaste_2023-07-14_14-20-14.png)
+
+
 
 ---
-对于有些角色比如雅木跟希尔克找不到初始属性修改，只能尝试修改存档
+关于存档文件
 
 ![](./imgs/Snip20230605_2.png)
 
