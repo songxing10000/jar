@@ -3,30 +3,39 @@
 ------------ | ------------- | ------------| ------------
 ![1](./imgs/Screenshot_20230605-205615.png) | ![2](./imgs/Screenshot_20230605-205623.png) |![3](./imgs/Screenshot_20230605-205650.png) |![4](./imgs/Screenshot_20230605-205655.png)
  
-
-1.安装`jar`游戏模拟器
+<details>
+<summary>1.安装jar游戏模拟器</summary>
 
 `tools`文件夹下的`J2ME_Loader-1.7.9-open-release.apk`
 
+</details>
 
 
----
-2.模拟器安装`火焰-圣火徽章.jar`就可以玩了。
+<details>
+<summary>2.模拟器安装火焰-圣火徽章.jar</summary>
 
 `jar`文件夹下的`火焰-圣火徽章.jar`
 
----
-3.修改`火焰-圣火徽章.jar`工具
+</details>
 
-`Recaf`：https://github.com/Col-E/Recaf
+<details>
+<summary>3.修改jar文件的工具Recaf</summary>
 
----
-4.启动工具`Recaf` 
+下载： `Recaf`：https://github.com/Col-E/Recaf
+
+
+启动： 
+
 ```sh
 java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ```
----
-5.点菜单里的，`文件`、`加载`，选中`火焰-圣火徽章.jar`
+
+ 点菜单里的，`文件`、`加载`，选中`火焰-圣火徽章.jar`
+
+</details>
+ 
+ 
+
 
 以下给出几个可修改的地方
 
