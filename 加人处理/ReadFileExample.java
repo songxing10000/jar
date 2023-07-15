@@ -10,7 +10,9 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
 import java.util.jar.JarOutputStream;
-
+/*
+此文件由gpt协助生成
+*/
 public class ReadFileExample {
     public static void main(String[] args) {
         // readPfile();
