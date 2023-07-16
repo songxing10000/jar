@@ -128,19 +128,36 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 ---
 如何向`p0`文件中多追加些敌人
 ![](./imgs/Snipaste_2023-07-15_22-16-01.png)
+
  加人处理下的ReadFileExample.java
- 编译
+
+ 编译生成java字节码
+
  `javac ReadFileExample.java`
- 运行
+
+ 运行java字节码
+
  `java ReadFileExample`
+
 `ReadFileExample`主要实现了读取原始`p0`的内容。
+
 以及向原始`jar`文件追加一个`P0`文件的功能。
+
 为什么要读取原始`p0`内容:
 想追加得在原始数据上追加新敌方，然后把新数据写入的`P0`文件内。
+
 然后再打开新生成的`jar`文件，把原`p0`文件重命名为`p10`,再把
+
 新加入的`P0`重命名为`p0`。注意`P0`里第一个是存放人物的个数的，追加了几个这里也得在原基础上加。
+
 ![](./imgs/Screenshot_20230715-231530.png)
 
+```sh
+// kt代码生成 jar
+/Applications/Android\ Studio.app/Contents/plugins/Kotlin/kotlinc/bin/kotlinc ReadFileExample.kt -include-runtime -d ReadFileExample.jar
+// 运行jar
+java -jar ReadFileExample.jar
+```
 
 ---
 关于存档文件
