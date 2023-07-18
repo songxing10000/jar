@@ -1,28 +1,27 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.awt.FlowLayout;
 import java.io.*;
 import java.util.jar.*;
 import java.util.Enumeration;
+import java.awt.Dimension;
 
-public class  HelloWorldSwing {
-     static String jarFilePath = "";
-          static String fileToAddPath = "";
+public class HelloWorldSwing {
+    static String jarFilePath = "";
+    static String fileToAddPath = "";
+
     public static void main(String[] args) {
         // 设置标题
         JFrame frame = new JFrame("jar文件追加文件");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // 设置布局
-        frame.setLayout(new FlowLayout());
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
 
-// 成员变量label
+        // 成员变量label
         final JLabel label = new JLabel("显示路径的标签");
-        frame.getContentPane().add(label);
-
-         
-
+        panel.add(label);
 
         JButton openButton = new JButton("选择原jar文件");
         openButton.addActionListener(new ActionListener() {
@@ -32,15 +31,15 @@ public class  HelloWorldSwing {
                 int result = fileChooser.showOpenDialog(frame);
                 if (result == JFileChooser.APPROVE_OPTION) {
                     File selectedFile = fileChooser.getSelectedFile();
-                    jarFilePath =  selectedFile.getPath();
+                    jarFilePath = selectedFile.getPath();
                     label.setText("原jar路径：" + jarFilePath);
                 }
             }
         });
-        frame.getContentPane().add(openButton);
-final JLabel label2 = new JLabel("显示路径的标签");
-        frame.getContentPane().add(label2);
-JButton openButton2 = new JButton("选择要添加的文件");
+        panel.add(openButton);
+        final JLabel label2 = new JLabel("显示路径的标签");
+        panel.add(label2);
+        JButton openButton2 = new JButton("选择要添加的文件");
         openButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -48,33 +47,40 @@ JButton openButton2 = new JButton("选择要添加的文件");
                 int result = fileChooser.showOpenDialog(frame);
                 if (result == JFileChooser.APPROVE_OPTION) {
                     File selectedFile = fileChooser.getSelectedFile();
-                    fileToAddPath =  selectedFile.getPath();
+                    fileToAddPath = selectedFile.getPath();
                     label2.setText("要添加的文件路径：" + fileToAddPath);
                 }
             }
         });
-frame.getContentPane().add(openButton2);
+        panel.add(openButton2);
 
-        
-        // 显示窗口
+        // 设置面板的首选大小
+        panel.setPreferredSize(new Dimension(200, 300));
+
+        frame.add(panel);
+
         frame.pack();
-        frame.setVisible(true); 
+        // 重新计算并应用布局
+        frame.revalidate();
 
-JButton openButton3 = new JButton("开始添加");
-        
-frame.getContentPane().add(openButton3);
+        frame.setVisible(true);
 
-final JLabel logLabel = new JLabel("...");
-        frame.getContentPane().add(logLabel);
-openButton3.addActionListener(new ActionListener() {
+        JButton openButton3 = new JButton("开始添加");
+
+        panel.add(openButton3);
+
+        final JLabel logLabel = new JLabel("...");
+        panel.add(logLabel);
+        openButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                 startAdd(jarFilePath, fileToAddPath, logLabel);
+                startAdd(jarFilePath, fileToAddPath, logLabel);
             }
         });
     }
+
     public static void startAdd(String jarFilePath, String fileToAddPath, JLabel logLabel) {
-        
+
         try {
             // 创建一个临时文件来保存新的 Jar 文件内容
             File tempFile = File.createTempFile("temp", null);
@@ -126,7 +132,7 @@ openButton3.addActionListener(new ActionListener() {
             System.out.println("文件已成功追加到 Jar 文件中。");
         } catch (IOException e) {
 
-logLabel.setText(e.getMessage());
+            logLabel.setText(e.getMessage());
             e.printStackTrace();
         }
     }
