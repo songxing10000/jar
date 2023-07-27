@@ -6,10 +6,14 @@ import java.io.*;
 import java.util.jar.*;
 import java.util.Enumeration;
 import java.awt.Dimension;
+import java.util.List;
+import java.util.ArrayList;
 
 public class HelloWorldSwing {
     static String jarFilePath = "";
     static String fileToAddPath = "";
+  
+    static    List<String> filesToAddPaths = new ArrayList<>();
 
     public static void main(String[] args) {
         // 设置标题
@@ -43,13 +47,19 @@ public class HelloWorldSwing {
         openButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFileChooser fileChooser = new JFileChooser();
-                int result = fileChooser.showOpenDialog(frame);
-                if (result == JFileChooser.APPROVE_OPTION) {
-                    File selectedFile = fileChooser.getSelectedFile();
-                    fileToAddPath = selectedFile.getPath();
-                    label2.setText("要添加的文件路径：" + fileToAddPath);
-                }
+                  JFileChooser fileChooser = new JFileChooser();
+fileChooser.setMultiSelectionEnabled(true);
+int result = fileChooser.showOpenDialog(frame);
+if (result == JFileChooser.APPROVE_OPTION) {
+    File[] selectedFiles = fileChooser.getSelectedFiles();
+    filesToAddPaths.clear();
+
+    for (File file : selectedFiles) {
+        filesToAddPaths.add(file.getPath());
+    }
+    // 更新界面显示已选择的文件路径
+    // ...
+}
             }
         });
         panel.add(openButton2);
@@ -74,12 +84,13 @@ public class HelloWorldSwing {
         openButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                startAdd(jarFilePath, fileToAddPath, logLabel);
+               
+                 startAdd(jarFilePath, filesToAddPaths, logLabel);
             }
         });
     }
 
-    public static void startAdd(String jarFilePath, String fileToAddPath, JLabel logLabel) {
+    public static void startAdd(String jarFilePath, List<String> filesToAddPaths, JLabel logLabel) {
 
         try {
             // 创建一个临时文件来保存新的 Jar 文件内容
@@ -105,8 +116,9 @@ public class HelloWorldSwing {
                 is.close();
                 jos.closeEntry();
             }
-
-            // 添加新的文件到 Jar 文件中
+for (String fileToAddPath : filesToAddPaths) {
+    
+    // 添加新的文件到 Jar 文件中
             File fileToAdd = new File(fileToAddPath);
             JarEntry newEntry = new JarEntry(fileToAdd.getName());
             jos.putNextEntry(newEntry);
@@ -118,6 +130,8 @@ public class HelloWorldSwing {
             }
             fis.close();
             jos.closeEntry();
+}
+            
 
             // 关闭流并完成 Jar 文件的更新
             jos.close();
