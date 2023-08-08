@@ -97,6 +97,12 @@ java -jar /Users/dfpo/Downloads/recaf-2.21.13-J8-jar-with-dependencies.jar
 我修改后的
 ![](./imgs/Snipaste_2023-07-12_16-11-55.png)
 
+获取lang.dat文件的内容后，我们可以更简单地获取武器或物品的编号
+![](./imgs/Snipaste_2023-08-08_15-14-23.png)
+
+
+
+
 也可以根据需要修改，如放置两个`地震`，两个`星之珠`(武器耐久度不减)，直接双`地震`秒杀通关
 
 --- 
