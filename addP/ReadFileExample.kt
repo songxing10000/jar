@@ -53,7 +53,7 @@ object ReadFileExample {
 
 // 追加P0文件到新生成的jar文件中
             var additionalData = byteArrayOf(
-                21//开始是18个，这个21代表人物数量十进制的
+                24//开始是18个，这个21代表人物数量十进制的
             )
             additionalData += lu_ka_bytes
             additionalData += ge_lei_bytes
@@ -84,6 +84,10 @@ object ReadFileExample {
             additionalData += make_ft(56,16, 1, 7)
             additionalData += make_ft(57,17, 2, 7)
             additionalData += make_ft(58, 18, 3, 7)
+
+additionalData += make_ft(59, 19, 4, 7)
+additionalData += make_ft(60, 20, 5, 7)
+additionalData += make_ft(61, 21, 6, 7)
 
             outputStream.putNextEntry(JarEntry("P0"))
             outputStream.write(additionalData)
@@ -312,9 +316,9 @@ object ReadFileExample {
         25,//总血量
         2,//运气
         4,// 移动
-        1,//武器
-        0,
-        0,
+        1,//武器或物品id
+        0,//武器或物品id
+        0,//武器或物品id
         0, // int类型的1，转换为byte
         0, // int类型的1，转换为byte
         0, // int类型的1，转换为byte
