@@ -46,15 +46,7 @@ private  ArrayList<String> imageNames;
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-//        ImageView imageView;
-//
-//            imageView = new ImageView(mContext);
-//            imageView.setLayoutParams(new GridView.LayoutParams(150, 150));
-//            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-//        imageView.setBackgroundColor(Color.GRAY);
-//Bitmap img = this.bitmapArray[position];
-//        imageView.setImageBitmap(img);
-//        return imageView;
+
         LinearLayout layout;
 
         if (convertView == null) {
