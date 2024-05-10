@@ -120,7 +120,7 @@ android {
 
 static def generateVersionCode() {
     def result = "git rev-list HEAD --count".execute().text.trim()
-    return result.toInteger()
+    return result//.toInteger()
 }
 
 def getMidletManifestProperties() {
